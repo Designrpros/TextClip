@@ -386,7 +386,7 @@ export default function Home() {
           <HeroSection>
             {/* The actual logo image would need to be provided, using a placeholder for now */}
             <HeroTextClipLogo
-                src="/images/Logo.png" 
+                src="/images/logo.png" 
                 alt="TextClip App Logo"
                 width={140}
                 height={140}
