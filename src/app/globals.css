@@ -1,12 +1,13 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f0f0f0; /* Light mode background */
+  --foreground: #1a1a2e; /* Light mode text */
+  --accent: #e94560;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1a2e; /* Dark mode background */
+    --foreground: #f0f0f0; /* Dark mode text */
   }
 }
 
@@ -33,10 +34,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
