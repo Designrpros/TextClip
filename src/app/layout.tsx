@@ -1,10 +1,11 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import StyledComponentsRegistry from "../lib/registry"; // Path to registry component
-import Navbar from "@/components/Navbar"; // Path to Navbar component
+import StyledComponentsRegistry from "../lib/registry";
+import Navbar from "@/components/Navbar";
+import GoogleAnalytics from "@/components/GoogleAnalytics"; // Import the new component
 import "./globals.css";
 
-// Use Geist fonts as requested
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,11 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Apply Geist font variables and remove the default margin style that was in the Inter version */}
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* Wrap everything in the StyledComponentsRegistry for server-side rendering support */}
+        {/* Add the Google Analytics component here */}
+        <GoogleAnalytics gaId="G-VL6VPT94JM" />
+
         <StyledComponentsRegistry>
-          <Navbar /> {/* Render Navbar on all pages */}
+          <Navbar />
           {children}
         </StyledComponentsRegistry>
       </body>
