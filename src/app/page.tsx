@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import Image from "next/image";
 import styled, { createGlobalStyle } from "styled-components";
 import React, { useState } from 'react';
@@ -397,9 +399,11 @@ export default function Home() {
               The fastest way to recognize and extract text from any part of your screen, powered by native macOS Vision technology.
             </Subtitle>
             <div>
-              <CTAButton href="https://apps.apple.com/no/app/textclip/id6746357735?l=nb&mt=12" target="_blank">
-                Download on the App Store
+            <Link href="/download" passHref>
+              <CTAButton>
+                Download for macOS
               </CTAButton>
+            </Link>
               <SecondaryCTA href="#demo">
                 See It In Action
               </SecondaryCTA>
@@ -503,9 +507,11 @@ export default function Home() {
           <FinalCTASection>
               <FinalCTATitle>Stop Retyping. Start Clipping.</FinalCTATitle>
               <FinalCTASubtitle>Download TextClip today and unlock the text trapped on your screen.</FinalCTASubtitle>
-              <CTAButton href="https://apps.apple.com/no/app/textclip/id6746357735?l=nb&mt=12" target="_blank">
-                Download on the App Store
+            <Link href="/download" passHref>
+              <CTAButton>
+                Download for macOS
               </CTAButton>
+            </Link>
           </FinalCTASection>
 
         </MainContent>
